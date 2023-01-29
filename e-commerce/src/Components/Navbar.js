@@ -9,14 +9,13 @@ import {
 } from "react-icons/ai";
 
 const Navbar = () => {
-  const el = document.querySelector("#navList");
   const toggleClass = () => {
+    const el = document.getElementById("navList");
     if (el.classList.contains("hidden")) {
       el.classList.remove("hidden");
     } else {
       el.classList.add("hidden");
     }
-    // el.classList.toggle('hidden');
   };
 
   return (
@@ -29,13 +28,13 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="">
+      <div>
         <AiOutlineMenu
           className="mt-2 ml-auto lg:hidden"
           onClick={() => toggleClass()}
         />
 
-        <ul id="navList" className="hidden justify-between lg:flex ">
+        <ul id="navList" className="hidden justify-between lg:flex">
           <li className="flex  items-center px-2">
             <AiOutlineHome />
             <Link
